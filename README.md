@@ -28,6 +28,43 @@ npm install
 
 3. Ensure Appium server is running before executing tests.
 
+
+
+## Create Android Virtual Device
+
+1. Create Android Virtual Device using this link [Using this Link](https://developer.android.com/studio/run/managing-avds) 
+
+2. Open Terminal or Command-line and go to emulator folder of Android:
+
+### Windows
+
+``` sh
+cd C:\Users\<username>\AppData\Local\Android\Sdk\emulator
+```
+
+### Mac or Linux
+
+``` sh
+cd /Users/<username>/Library/Android/sdk/emulator
+```
+
+3. Run the following command to get all created avds
+
+``` sh
+./emulator -list-avds
+```
+
+4. Run the following to open avd:
+
+``` sh
+./emulator -avd <avd-device-name>
+```
+
+5. Drag and Drop the apk file on emulator after device loads up completely.
+
+#### Note: Please Setup Google user or account before automating.
+
+
 ## Running Tests
 
 To run the tests, use the following command:
@@ -51,6 +88,3 @@ The project is structured as follows:
 - Make sure to customize the `wdio.conf.js` file according to your device capabilities and application details.
 - Tests are located in the `test` directory and can be expanded based on your application's test scenarios.
 
-## Contributing
-
-Contributions are welcome! Fork this repository and submit a pull request with your changes.
